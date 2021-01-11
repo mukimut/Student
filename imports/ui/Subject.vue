@@ -16,9 +16,9 @@
 </template>
 
 <script>
+
 import Vue from "vue";
 import { Subjects } from "../api/subjects";
-
 
 export default {
   components: {  },
@@ -29,7 +29,8 @@ export default {
 
   methods: {
 		addSubject() {
-      Subjects.insert({value: this.newSubject, createTime: new Date()})
+      Subjects.insert({value: this.newSubject, createTime: new Date()});
+      this.newSubject = '';
     },
     deleteSubject(id) {
       Subjects.remove(id);

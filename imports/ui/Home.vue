@@ -8,7 +8,7 @@
 
     <ul>
       <li>Students</li>
-      <li>Department</li>
+      <li><a href="/department">Department</a></li>
       <li><a href="/subject">Subjects</a></li>
     </ul>
   </div>

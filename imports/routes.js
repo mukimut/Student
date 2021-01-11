@@ -10,11 +10,13 @@ const routerFactory = new RouterFactory({
 import NotFound from '/imports/ui/NotFound.vue';
 import Home from '/imports/ui/Home.vue';
 import Subject from '/imports/ui/Subject.vue';
+import Department from '/imports/ui/Department.vue';
 
 RouterFactory.configure(router => {
   router.addRoutes([
     {path: '/', name: 'home', component: Home},
     {path: '/subject', name: 'subject', component: Subject},
+    {path: '/department', name: 'department', component: Department},
     {path: '*', name: 'not-found', component: NotFound }
   ]);
 }, -1);
