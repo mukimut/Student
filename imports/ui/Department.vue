@@ -100,7 +100,7 @@ export default {
 			this.subjectList = Subjects.find({}).fetch().map(e => e.value);
       return deptList
     }
-  },
+  }
 };
 </script>
 

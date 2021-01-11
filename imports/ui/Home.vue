@@ -7,7 +7,7 @@
     </header>
 
     <ul>
-      <li>Students</li>
+      <li><a href="/student">Students</a></li>
       <li><a href="/department">Department</a></li>
       <li><a href="/subject">Subjects</a></li>
     </ul>

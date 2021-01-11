@@ -8,7 +8,8 @@
 
     <ul>
       <li v-for="subject in subjectList" v-bind:key="subject._id">
-        {{subject.value}} <button className="delete" @click="deleteSubject(subject._id)">Delete</button>
+        {{subject.value}} | In {{subject.deptCount}} departments; {{subject.studentCount}} students with this course
+        <button className="delete" @click="deleteSubject(subject._id)">Delete</button>
       </li>
 
     </ul>
@@ -19,6 +20,8 @@
 
 import Vue from "vue";
 import { Subjects } from "../api/subjects";
+import { Departments } from "../api/departments";
+import { Students } from "../api/students";
 
 export default {
   components: {  },
@@ -39,7 +42,14 @@ export default {
 
   meteor: {
     subjectList() {
-      return Subjects.find({}).fetch();
+      const subjectList = Subjects.find({}).fetch();
+      return subjectList.map(e => {
+        e.studentCount = Students.find({subjects: e.value}).count();
+        e.deptCount = Departments.find({subjects: e.value}).count();
+
+        return e;
+      });
+      // return subjectList;
     },
   },
 };
