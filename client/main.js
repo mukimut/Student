@@ -6,9 +6,8 @@ import routerFactory from '/imports/routes';
 import Vue from 'vue';
 import AppLayout from '/imports/ui/AppLayout.vue';
 
-
-
-
+import VueMeteorTracker from 'vue-meteor-tracker';
+Vue.use(VueMeteorTracker);
 
 
 

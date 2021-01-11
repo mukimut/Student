@@ -9,7 +9,7 @@
     <ul>
       <li>Students</li>
       <li>Department</li>
-      <li>Subject</li>
+      <li><a href="/subject">Subjects</a></li>
     </ul>
   </div>
 </template>
