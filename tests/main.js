@@ -1,4 +1,5 @@
 import assert from "assert";
+import './department.test.js'
 
 describe("student", function () {
   it("package.json has correct name", async function () {
